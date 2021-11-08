@@ -1,7 +1,7 @@
 ---
 title: "Class 11"
 author: "Byanca Lima Valenzuela (A16688058)"
-output: github_document
+output: word_document
 ---
 
 ```{r}
@@ -22,7 +22,8 @@ round((method.sums/method.sums["Total"])*100,2)
 round((db$Total/method.sums["Total"])*100,2)
 ```
 
-> Q3: Type HIV in the PDB website search box on the home page and determine how many HIV-1 protease structures are in the current PDB? 1828 Structures
+> Q3: Type HIV in the PDB website search box on the home page and determine how many HIV-1 protease structures are in the current PDB?
+1828 Structures
 
 ## VMD Structure Visualization Image
 
@@ -33,7 +34,7 @@ round((db$Total/method.sums["Total"])*100,2)
 ![](1HSG.bmp)
 
 
-#Section 3
+#Section 3 Introduction to Bio3D in R
 #Using Bio3D
 
 ```{r}
@@ -42,6 +43,16 @@ library(bio3d)
 pdb<- read.pdb("1HSG")
 pdb
 ```
+>Q7: How many amino acid residues are there in this pdb object?
+198
+
+>Q8: Name one of the two non-protein residues? 
+MK1
+
+>Q9: How many protein chains are in this structure? 
+2
+
+
 ```{r}
 pdbseq(pdb)
 aa321(pdbseq(pdb))
@@ -58,4 +69,3 @@ The ATOM Records
 ```{r}
 head(pdb$atom)
 ```
-
